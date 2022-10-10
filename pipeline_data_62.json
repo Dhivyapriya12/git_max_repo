@@ -4,81 +4,15 @@
    },
    "source_details": {
       "source_id": 27,
-      "table_schema": "collection_service",
+      "table_schema": "configuration_service",
       "table_list": [
          {
-            "table_name": "contracts",
+            "table_name": "cities",
             "refresh_type": "complete",
             "metadata": {
-               "activated_at": [
-                  "activated_at",
+               "created_at": [
+                  "created_at",
                   "timestamp with time zone",
-                  "True",
-                  "False"
-               ],
-               "amount_overdue": [
-                  "amount_overdue",
-                  "numeric",
-                  "False",
-                  "False"
-               ],
-               "champion_id": [
-                  "champion_id",
-                  "character varying",
-                  "False",
-                  "False"
-               ],
-               "champion_platform_fee": [
-                  "champion_platform_fee",
-                  "double precision",
-                  "True",
-                  "False"
-               ],
-               "createdAt": [
-                  "createdAt",
-                  "timestamp with time zone",
-                  "True",
-                  "False"
-               ],
-               "daily_remit": [
-                  "daily_remit",
-                  "numeric",
-                  "False",
-                  "False"
-               ],
-               "days_overdue": [
-                  "days_overdue",
-                  "integer",
-                  "False",
-                  "False"
-               ],
-               "deactivated_at": [
-                  "deactivated_at",
-                  "timestamp with time zone",
-                  "True",
-                  "False"
-               ],
-               "duration": [
-                  "duration",
-                  "numeric",
-                  "False",
-                  "False"
-               ],
-               "duration_in_days": [
-                  "duration_in_days",
-                  "integer",
-                  "True",
-                  "False"
-               ],
-               "has_insurance": [
-                  "has_insurance",
-                  "boolean",
-                  "False",
-                  "False"
-               ],
-               "hp_value": [
-                  "hp_value",
-                  "numeric",
                   "False",
                   "False"
                ],
@@ -88,93 +22,57 @@
                   "False",
                   "True"
                ],
-               "last_amount_remitted": [
-                  "last_amount_remitted",
-                  "numeric",
-                  "True",
-                  "False"
-               ],
-               "last_day_remitted": [
-                  "last_day_remitted",
-                  "timestamp with time zone",
-                  "True",
-                  "False"
-               ],
-               "location_id": [
-                  "location_id",
-                  "integer",
-                  "False",
-                  "False"
-               ],
-               "location_uuid": [
-                  "location_uuid",
-                  "uuid",
-                  "True",
-                  "False"
-               ],
-               "meta": [
-                  "meta",
-                  "json",
-                  "True",
-                  "False"
-               ],
-               "payment_status_id": [
-                  "payment_status_id",
-                  "integer",
-                  "False",
-                  "False"
-               ],
-               "pricing_template_id": [
-                  "pricing_template_id",
-                  "uuid",
-                  "True",
-                  "False"
-               ],
-               "status_id": [
-                  "status_id",
-                  "integer",
-                  "False",
-                  "False"
-               ],
-               "status_uuid": [
-                  "status_uuid",
-                  "uuid",
-                  "True",
-                  "False"
-               ],
-               "updatedAt": [
-                  "updatedAt",
-                  "timestamp with time zone",
-                  "True",
-                  "False"
-               ],
-               "vehicle_id": [
-                  "vehicle_id",
+               "name": [
+                  "name",
                   "character varying",
+                  "True",
+                  "False"
+               ],
+               "state_id": [
+                  "state_id",
+                  "uuid",
                   "False",
                   "False"
                ],
-               "want_driver_license": [
-                  "want_driver_license",
-                  "boolean",
-                  "True",
+               "updated_at": [
+                  "updated_at",
+                  "timestamp with time zone",
+                  "False",
                   "False"
                ]
             }
          },
          {
-            "table_name": "hp_statuses",
+            "table_name": "platforms",
             "refresh_type": "complete",
             "metadata": {
-               "config_id": [
-                  "config_id",
+               "account_id": [
+                  "account_id",
                   "uuid",
                   "True",
                   "False"
                ],
+               "comment": [
+                  "comment",
+                  "character varying",
+                  "True",
+                  "False"
+               ],
+               "country_id": [
+                  "country_id",
+                  "uuid",
+                  "True",
+                  "False"
+               ],
+               "created_at": [
+                  "created_at",
+                  "timestamp with time zone",
+                  "False",
+                  "False"
+               ],
                "id": [
                   "id",
-                  "integer",
+                  "uuid",
                   "False",
                   "True"
                ],
@@ -189,15 +87,221 @@
                   "character varying",
                   "True",
                   "False"
+               ],
+               "updated_at": [
+                  "updated_at",
+                  "timestamp with time zone",
+                  "False",
+                  "False"
+               ]
+            }
+         },
+         {
+            "table_name": "reasons",
+            "refresh_type": "complete",
+            "metadata": {
+               "created_at": [
+                  "created_at",
+                  "timestamp with time zone",
+                  "False",
+                  "False"
+               ],
+               "definition": [
+                  "definition",
+                  "text",
+                  "True",
+                  "False"
+               ],
+               "id": [
+                  "id",
+                  "uuid",
+                  "False",
+                  "True"
+               ],
+               "reason": [
+                  "reason",
+                  "character varying",
+                  "True",
+                  "False"
+               ],
+               "slug": [
+                  "slug",
+                  "character varying",
+                  "True",
+                  "False"
+               ],
+               "status_id": [
+                  "status_id",
+                  "uuid",
+                  "False",
+                  "False"
+               ],
+               "updated_at": [
+                  "updated_at",
+                  "timestamp with time zone",
+                  "False",
+                  "False"
+               ]
+            }
+         },
+         {
+            "table_name": "status",
+            "refresh_type": "complete",
+            "metadata": {
+               "created_at": [
+                  "created_at",
+                  "timestamp with time zone",
+                  "False",
+                  "False"
+               ],
+               "definition": [
+                  "definition",
+                  "text",
+                  "True",
+                  "False"
+               ],
+               "id": [
+                  "id",
+                  "uuid",
+                  "False",
+                  "True"
+               ],
+               "name": [
+                  "name",
+                  "character varying",
+                  "True",
+                  "False"
+               ],
+               "object_id": [
+                  "object_id",
+                  "uuid",
+                  "False",
+                  "False"
+               ],
+               "slug": [
+                  "slug",
+                  "character varying",
+                  "True",
+                  "False"
+               ],
+               "updated_at": [
+                  "updated_at",
+                  "timestamp with time zone",
+                  "False",
+                  "False"
+               ]
+            }
+         },
+         {
+            "table_name": "subcities",
+            "refresh_type": "complete",
+            "metadata": {
+               "city_id": [
+                  "city_id",
+                  "uuid",
+                  "False",
+                  "False"
+               ],
+               "code": [
+                  "code",
+                  "character varying",
+                  "True",
+                  "False"
+               ],
+               "created_at": [
+                  "created_at",
+                  "timestamp with time zone",
+                  "False",
+                  "False"
+               ],
+               "id": [
+                  "id",
+                  "uuid",
+                  "False",
+                  "True"
+               ],
+               "name": [
+                  "name",
+                  "character varying",
+                  "True",
+                  "False"
+               ],
+               "slug": [
+                  "slug",
+                  "character varying",
+                  "True",
+                  "False"
+               ],
+               "updated_at": [
+                  "updated_at",
+                  "timestamp with time zone",
+                  "False",
+                  "False"
+               ]
+            }
+         },
+         {
+            "table_name": "sub_reasons",
+            "refresh_type": "complete",
+            "metadata": {
+               "created_at": [
+                  "created_at",
+                  "timestamp with time zone",
+                  "False",
+                  "False"
+               ],
+               "definition": [
+                  "definition",
+                  "text",
+                  "True",
+                  "False"
+               ],
+               "id": [
+                  "id",
+                  "uuid",
+                  "False",
+                  "True"
+               ],
+               "name": [
+                  "name",
+                  "character varying",
+                  "True",
+                  "False"
+               ],
+               "reason_id": [
+                  "reason_id",
+                  "uuid",
+                  "False",
+                  "False"
+               ],
+               "slug": [
+                  "slug",
+                  "character varying",
+                  "True",
+                  "False"
+               ],
+               "updated_at": [
+                  "updated_at",
+                  "timestamp with time zone",
+                  "False",
+                  "False"
                ]
             }
          }
       ],
       "primary_or_date_column_list": [
          "",
+         "",
+         "",
+         "",
+         "",
          ""
       ],
       "update_column_list": [
+         "",
+         "",
+         "",
+         "",
          "",
          ""
       ],
@@ -213,6 +317,6 @@
       "project_id": "max-infra-staging",
       "bucket": "max-infra-staging-prod-new",
       "gcp_conn_id": "29",
-      "bq_dataset": "collection_service"
+      "bq_dataset": "configuration_service"
    }
 }
