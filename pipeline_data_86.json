@@ -1,25 +1,49 @@
 {
    "pipeline_info": {
-      "integration_id": 85
+      "integration_id": 86
    },
    "source_details": {
       "source_id": 31,
       "table_schema": "configuration_service",
       "table_list": [
          {
-            "table_name": "gender",
+            "table_name": "cities",
             "refresh_type": "complete",
             "metadata": {
-               "id": [
-                  "id",
-                  "integer",
+               "created_at": [
+                  "created_at",
+                  "timestamp with time zone",
                   "False",
                   "False"
+               ],
+               "deleted_at": [
+                  "deleted_at",
+                  "timestamp with time zone",
+                  "True",
+                  "False"
+               ],
+               "id": [
+                  "id",
+                  "uuid",
+                  "False",
+                  "True"
                ],
                "name": [
                   "name",
                   "character varying",
                   "True",
+                  "False"
+               ],
+               "state_id": [
+                  "state_id",
+                  "uuid",
+                  "False",
+                  "False"
+               ],
+               "updated_at": [
+                  "updated_at",
+                  "timestamp with time zone",
+                  "False",
                   "False"
                ]
             }
